@@ -1,15 +1,3 @@
-/**
- * change the flex direction to column
- * query select container object from html page
- * for numberOfGrid
- *      make div to become container of div each row/col
- *      append to container
- *      for numberOfGrid
- *          make child div
- *          add border to div and also color
- *          append child div to row container div
- */
-
 const container = document.querySelector(".container");
 createGrids(16);
 
