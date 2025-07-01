@@ -1,25 +1,26 @@
-const container = document.querySelector(".container");
-createGrids(16);
+main()
 
-function createGrids(numberOfGrid) {
-    for (let i = 0; i < numberOfGrid; i++) {
-        const gridContainer = document.createElement("div");
-        gridContainer.style.display = "flex";
-        container.appendChild(gridContainer);
-        for (let j = 0; j < numberOfGrid; j++) {
-            const grid = document.createElement("div");
-            createGrid(grid);
-            gridContainer.appendChild(grid);
-        }
+function main() {
+    let numberOfGrid = 16;
+    const container = document.querySelector(".container");
+    createGrids(container, numberOfGrid);
+}
+
+function createGrids(parent, n) {
+    for (let i = 0; i < n; i++) {
+        const container = document.createElement("div");
+        container.style.display = "flex";
+        container.style.flex = "1";
+        parent.appendChild(container);
+        createSingleGrid(container, n);
     }
 }
 
-function createGrid(grid) {
-    grid.style.minWidth = "60px";
-    grid.style.minHeight = "60px";
-    grid.style.border = "1px solid black";
-    grid.style.flexShrink = "1";
-    grid.addEventListener("mouseover", () => {
-        grid.classList.add("paint")
-    })
+function createSingleGrid(parent, n) {
+    for (let i = 0; i < n; i++) {
+        const grid = document.createElement("div");
+        grid.style.border = "1px solid #000000";
+        grid.style.flex = "1";
+        parent.appendChild(grid);
+    }
 }

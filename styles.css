@@ -3,13 +3,13 @@
     padding: 0px;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+body {
+    padding: 10px;
 }
 
-.paint {
-    background-color: black;
+.container {
+    width: 960px;
+    height: 960px;
+    display: flex;
+    flex-flow: column wrap;
 }
