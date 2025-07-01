@@ -21,6 +21,11 @@ function createSingleGrid(parent, n) {
         const grid = document.createElement("div");
         grid.style.border = "1px solid #000000";
         grid.style.flex = "1";
+        
+        grid.addEventListener("mouseover", () => {
+            grid.style.backgroundColor = "#000000";
+        })
+        
         parent.appendChild(grid);
     }
 }
